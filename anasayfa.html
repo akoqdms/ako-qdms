@@ -2,64 +2,73 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AKO QDMS - Ana Sayfa</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKO QDMS - Giriş</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container wide">
-    <header class="header">
-      <img src="görseller/logo.png" alt="Logo" class="logo-small" />
-      <h2>AKO QDMS - Kütüphane</h2>
-      <button onclick="logout()" class="logout">Çıkış Yap</button>
-    </header>
+  <div class="container">
+    <div class="login-box">
+      <!-- Başlık Bölümü -->
+      <h1>
+        <span class="ako">AKO</span><span class="qdms">QDMS</span>
+      </h1>
 
-    <h3>Hoş geldiniz!</h3>
+      <!-- Giriş Formu -->
+      <form id="loginForm">
+        <div class="input-group">
+          <input type="text" placeholder="Kullanıcı Adı" id="username" required />
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Şifre" id="password" required />
+        </div>
+        <div class="input-group">
+          <button type="button" onclick="login()">Giriş Yap</button>
+        </div>
+      </form>
 
-    <section class="upload-section">
-      <h4>Yeni Dosya Yükle</h4>
-      <input type="file" id="fileInput" multiple />
-      <button onclick="uploadFiles()">Yükle</button>
-    </section>
+      <!-- Giriş Sonuç Mesajı -->
+      <div id="loginResult" class="hidden">
+        <p id="resultMessage"></p>
+      </div>
 
-    <section class="media-library">
-      <h4>Yüklenen Dosyalar</h4>
-      <div id="fileList" class="grid"></div>
-    </section>
+      <p><a href="#">Şifremi Unuttum?</a></p>
+      <p>Hesabınız yok mu? <a href="#">Kayıt Ol</a></p>
+    </div>
   </div>
 
   <script>
-    function logout() {
-      window.location.href = "index.html";
-    }
+    // Kullanıcı bilgilerini JSON formatında saklamak (Örnek olarak)
+    const users = [
+      { username: "admin", password: "1234" },
+      { username: "user1", password: "pass123" },
+      { username: "user2", password: "secret123" }
+    ];
 
-    function uploadFiles() {
-      const input = document.getElementById("fileInput");
-      const fileList = document.getElementById("fileList");
+    // Giriş fonksiyonu
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-      for (let file of input.files) {
-        const div = document.createElement("div");
-        div.className = "file-card";
+      // Kullanıcı doğrulaması
+      const user = users.find(u => u.username === username && u.password === password);
+      
+      const resultMessage = document.getElementById("resultMessage");
+      const loginResult = document.getElementById("loginResult");
 
-        if (file.type.startsWith("image/")) {
-          const img = document.createElement("img");
-          img.src = URL.createObjectURL(file);
-          img.className = "thumb";
-          div.appendChild(img);
-        } else if (file.type.startsWith("video/")) {
-          const video = document.createElement("video");
-          video.src = URL.createObjectURL(file);
-          video.controls = true;
-          video.className = "thumb";
-          div.appendChild(video);
-        } else {
-          div.innerHTML = `<p>${file.name}</p>`;
-        }
+      if (user) {
+        resultMessage.textContent = "Başarılı giriş!";
+        resultMessage.style.color = "green";
+        loginResult.classList.remove("hidden");
 
-        fileList.appendChild(div);
-
-        // NOT: Gerçek dosya yüklemesi yapılmıyor, sadece önizleme
-        // Gerçek yükleme için backend gereklidir (PHP, Node.js vs.)
+        // Başarılı girişten sonra yönlendirme
+        setTimeout(() => {
+          window.location.href = "dashboard.html";  // Yönlendirme URL'si
+        }, 1000);  // 1 saniye beklemeden sonra yönlendir
+      } else {
+        resultMessage.textContent = "Hatalı giriş! Lütfen bilgilerinizi kontrol edin.";
+        resultMessage.style.color = "red";
+        loginResult.classList.remove("hidden");
       }
     }
   </script>
