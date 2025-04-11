@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kontrol Paneli</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <link rel="shortcut icon" href="/Content/img/icon.ico" />
+
+    <!-- CSS -->
+    
+    <link href="/Content/css/fonts.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/plugins/font-awesome/css/font-awesome.min.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/plugins/simple-line-icons/simple-line-icons.min.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/plugins/bootstrap/css/bootstrap.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/plugins/uniform/css/uniform.default.min.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+
+    
+    <link href="/Content/Charset.css" rel="stylesheet"/>
+<link href="/Content/dx.common.css" rel="stylesheet"/>
+<link href="/Content/dx.light.css" rel="stylesheet"/>
+
+    <script src="/Scripts/jquery-3.4.1.js"></script>
+<script src="/Scripts/bootstrap.js"></script>
+
+    <script src="/Scripts/jszip.js"></script>
+<script src="/Scripts/dx.all.debug.js"></script>
+<script src="/Scripts/aspnet/dx.aspnet.mvc.js"></script>
+<script src="/Scripts/aspnet/dx.aspnet.data.js"></script>
+
+
+    <link href="/Content/css/components-rounded.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/css/plugins.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/css/layout.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/css/darkblue.css?v=v2.2.201" rel="stylesheet" />
+    <link href="/Content/css/custom.css?v=v2.2.201" rel="stylesheet" />
+    <!-- CSS -->
+</head>
+<body class="page-header-fixed page-quick-sidebar-over-content">
+    <!-- BEGIN HEADER -->
+    <div id="modalPlace"></div>
+    <div id="modalMessageControl"></div>
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner" style="line-height: 40px;">
+                <a href="../../operator/start" target="_blank" class="clientButton btn green"><i class="fa fa-user"></i> Operatör Ekranı</a>
+                <span class="projectName">
+                    (AKO Ak&#252; Prod)
+                </span>
+
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                    <a href="http://www.inpds.com" target="_blank" title="INPDS Websitesi">
+                        <img src="../../Content/img/logo.png" height="30" alt="logo" class="logo-default" style="margin-top:0px !important;" />
+                    </a>
+                <div class="menu-toggler sidebar-toggler hide">
+                </div>
+            </div>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+            </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <!-- BEGIN TOP NAVIGATION MENU -->
+            <div class="top-menu">
+                <ul class="nav navbar-nav pull-right">
+                                                <li class="dropdown dropdown-user  dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <img alt="" class="img-circle" src="../../Content/img/userimg/zqn8mmprpd47.jpg" />
+                                    <span class="username username-hide-on-mobile">
+                                        Furkan KARSAVURAN
+                                    </span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="javascript:" onclick="userModal(68);"><i class="icon-settings"></i> Hesap Ayarları</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Account/Logout">
+                                            <i class="icon-key"></i> Çıkış Yap
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
+                </ul>
+            </div>
+            <!-- END TOP NAVIGATION MENU -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <div class="clearfix">
+    </div>
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        
+
+<div class="page-sidebar-wrapper">
+    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+    <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+    <div class="page-sidebar navbar-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+        <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+        <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+        <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+        <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+        <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+        <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+            <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+            <li class="sidebar-toggler-wrapper">
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <div class="sidebar-toggler">
+                </div>
+                <!-- END SIDEBAR TOGGLER BUTTON -->
+            </li>
+            
+            <br />
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon-home"></i>
+                        <span class="title">Panel</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/Dashboard/Main">
+                                Giriş Sayfası
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Dashboard/Machines">
+                                    Makineler Paneli
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-th"></i>
+                        <span class="title">Kokpit</span>
+                        <span class="arrow "></span>
+                    </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="/Cockpit/CockpitConfig/-1">
+                                    Kokpit Konfigürasyonu Ekle
+                                </a>
+                            </li>
+
+                                <li>
+                                    <a href="javascript:;">
+                                        Kokpit-1 <span class="arrow"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a target="_blank" href="/Cockpit/Index/1">Kokpit-1 Görünümü</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Cockpit/CockpitConfig/1">
+                                                Kokpit-1 Konfigürasyonu
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/Cockpit/CockpitFunctions/1">
+                                                Kokpit-1 Fonksiyonları
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        Kokpit-2 <span class="arrow"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a target="_blank" href="/Cockpit/Index/2">Kokpit-2 Görünümü</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Cockpit/CockpitConfig/2">
+                                                Kokpit-2 Konfigürasyonu
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/Cockpit/CockpitFunctions/2">
+                                                Kokpit-2 Fonksiyonları
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        Kokpit-3 <span class="arrow"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a target="_blank" href="/Cockpit/Index/3">Kokpit-3 Görünümü</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Cockpit/CockpitConfig/3">
+                                                Kokpit-3 Konfigürasyonu
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/Cockpit/CockpitFunctions/3">
+                                                Kokpit-3 Fonksiyonları
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                        </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="title">Bildirimler</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        
+                        <li>
+                            <a href="/Notification/ListDevEx">
+                                Bildirimler
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Notification/Edit/-1">
+                                    Bildirim Ekle
+                                </a>
+                            </li>
+                                                <li>
+                            <a href="/Notification/MessageNotificationListDevEx">
+                                Mesajlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Notification/MessageEdit/-1">
+                                Mesaj Ekle
+                            </a>
+                        </li>
+                        <li style="display:none;">
+                            <a href="/Rule/Report">
+                                Raporlar
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="fa fa-database"></i>
+                    <span class="title">Enerji Yönetimi</span>
+                    <span class="arrow "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="/Configuration/PlcTreeviews">
+                            Analizörler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Configuration/PlcDynamicAxisValuesEdit/-1">
+                            Enerji Analizör Grafik Parametresi Ekle
+                        </a>
+                    </li>
+
+                    
+                    <li>
+                        <a href="/Configuration/PlcDynamicAxisValueListDevEx">
+                            Enerji Analizör Grafik Parametreleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Configuration/PlcRegionEdit/-1">
+                            Plc Bölgesi Ekle
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/Configuration/PlcRegionListDevEx">
+                            Plc Bölgeleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Configuration/PlcRegionAnalyserEdit/-1">
+                            Plc Bölge Makine Bağlantısı Ekle
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/Configuration/PlcRegionAnalyserListDevEx">
+                            Plc Bölge Makine Bağlantıları
+                        </a>
+                    </li>
+                </ul>
+            </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-database"></i>
+                        <span class="title">Makineler</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/Machine/List">
+                                Makineler
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="/Machine/Edit/-1">
+                                    Makine Ekle
+                                </a>
+                            </li>
+                                                                            <li>
+                                
+                                <a href="/Center/ListDevEx">
+                                    İş Merkezleri
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Center/Edit/-1">
+                                        İş Merkezi Ekle
+                                    </a>
+                                </li>
+                                                    <li>
+                                
+                                <a href="/Line/ListDevEx">
+                                    Üretim Hatları
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Line/Edit/-1">
+                                        Üretim Hattı Ekle
+                                    </a>
+                                </li>
+                        <li>
+                            
+                            <a href="/Machine/ScalesListDevEx">
+                                Teraziler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Machine/ScalesDetailEdit/-1">
+                                Terazi Ekle
+                            </a>
+                        </li>
+                        <li>
+                            
+                            <a href="/Machine/DeviceListDevEx">
+                                Cihazlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Machine/DeviceEdit/-1">
+                                Cihaz Ekle
+                            </a>
+                        </li>
+                        <li>
+                            
+                            <a href="/Machine/PrinterListDevEx">
+                                Yazıcılar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Machine/PrinterEdit/-1">
+                                Yazıcı Ekle
+                            </a>
+                        </li>
+                                                <li style="display:none;">
+                            <a href="/Machine/Schema">
+                                Şema
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="title">Taşıyıcılar</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            
+                            
+                            <a href="/Carriage/CarriageListDevEx">
+                                Taşıyıcılar
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Carriage/Edit/-1">
+                                    Taşıyıcı Ekle
+                                </a>
+                            </li>
+                                                    <li>
+                                
+                                <a href="/Carriage/CarriageTypeListDevEx">
+                                    Taşıyıcı Türleri
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Carriage/TypeEdit/-1">
+                                        Taşıyıcı Türü Ekle
+                                    </a>
+                                </li>
+                                                <li>
+                            
+                            <a href="/Carriage/CarriageContentSumListDevEx">
+                                Taşıyıcı İçerik Listesi
+                                <span class="badge badge-success badge-roundless">yeni</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                                <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-truck"></i>
+                            <span class="title">Forklift Yönetimi</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="/Forklift/ForkliftList">
+                                    Forklift Çağrıları
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                                    
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-code-fork"></i>
+                        <span class="title">Proje Yönetimi</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/Project/List">
+                                Projeler
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Project/Edit/-1">
+                                    Proje Ekle
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-cubes"></i>
+                        <span class="title">Stok Yönetimi</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                            <li>
+                                <a href="/Product/ProductListDevEx">
+                                    Ürünler
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Product/Edit/-1">
+                                        Ürün Ekle
+                                    </a>
+                                </li>
+                        <li>
+                            <a href="/Product/ProductGroupEdit/-1">
+                                Ürün Grubu Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Product/ProductGroupListDevEx">
+                                Ürün Grupları
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/Stock/List" style="display:none;">
+                                Stok Datası
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Stock/StockListDevEx/-1">
+                                    Stok Miktarları
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Location/LocationDevEx">
+                                    Lokasyonlar
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Location/Edit/-1">
+                                        Lokasyon Ekle
+                                    </a>
+                                </li>
+                                                        <li>
+                                    <a href="/Warehouses/WareHouseDevEx">
+                                        Ambarlar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Warehouses/Edit/-1">
+                                        Ambar Ekle
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/CountReport/List">
+                                        Sayımlar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/CountReport/Edit/-1">
+                                        Sayım Ekle
+                                    </a>
+                                </li>
+                        <li>
+                            <a href="/Location/Transfer" style="display:none;">
+                                Stok Transferi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Product/Bulk">
+                                Toplu Kayıt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Stock/StockTransferEdit/-1">
+                                Stok Transferi Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Stock/StockTransferList">
+                                Stok Transferleri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Stock/RelStockTransferList">
+                                Stok Transfer Detayları
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Product/StockReservationDevEx">
+                                Stoktaki Malzeme Rezervasyonları
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-qrcode"></i>
+                        <span class="title">Seri Numaraları Yönetimi</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/Serial/Manage">
+                                Seri Numarası Ata
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Serial/Carriages">
+                                Seri / Taşıyıcı Atama
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                                        <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-tasks"></i>
+                        <span class="title">Üretim Planlama</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                            <li>
+                                <a href="/Production/ProductionOrderDevEx">
+                                    Üretim Emirleri
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Production/Edit/-1">
+                                        Üretim Emri Ekle
+                                    </a>
+                                </li>
+                                                    <li>
+                                <a href="/Order/orderDevEx">
+                                    Üretim Operasyonları
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Order/Edit/-1">
+                                        Üretim Operasyonu Ekle
+                                    </a>
+                                </li>
+                        <li class="hidden">
+                            <a href="/Order/Live">
+                                Canlı Görüntüle
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Order/Schedule">
+                                    Çizelgeleme
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Order/Gantt">
+                                    Gantt Şeması
+                                </a>
+                                
+                            </li>
+                                                    <li>
+                                <a href="/Order/MultiTrace">
+                                    Çok Seviyeli Üretim Takibi
+                                </a>
+                            </li>
+                                                        <li>
+                                    <a href="/Hocaoglu/Bulk">
+                                        Toplu Kayıt
+                                    </a>
+                                </li>
+                                                                                                                                            </ul>
+                </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="fa fa-dashboard"></i>
+                    <span class="title">
+                        İş Zekası
+                        <span class="badge badge-success badge-roundless">yeni</span>
+                    </span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                        <li>
+                            <a href="/Dashboard/List">
+                                İş Zekası Yönetimi
+                                <span class="badge badge-warning badge-roundless">beta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Dashboard/WidgetList">
+                                İş Zekası Kütüphanesi
+                                <span class="badge badge-warning badge-roundless">beta</span>
+                            </a>
+                        </li>
+                    <!--Buradaki menüler dinamik gelecek-->
+                            <li>
+                                <a href="javascript:;">
+                                    Y&#246;netim    <span class="arrow"></span>
+                                </a>
+
+                                <ul class="sub-menu">
+                                        <li>
+                                            <a href="/Dashboard/Render/1">Sistem Kullanım Performansı</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Dashboard/Render/4">G&#252;nl&#252;k Makine &#220;retimi</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Dashboard/Render/5">G&#252;nl&#252;k Makine &#220;retimi Grafik</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Dashboard/Render/6">Makine ve Hat Toplu &#220;retim</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Dashboard/Render/8">Makine Bazlı Fire Detayı</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Dashboard/Render/9">Makine Duruş Sebepleri ve S&#252;releri</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Dashboard/Render/10">Makine Bazlı Fire Oranları</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Dashboard/Render/11">IZB &#220;retim ve T&#252;ketim Grafiği</a>
+                                        </li>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    K&#252;rleme    <span class="arrow"></span>
+                                </a>
+
+                                <ul class="sub-menu">
+                                        <li>
+                                            <a href="/Dashboard/Render/2">K&#252;rleme T&#252;nelindeki Paletler</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Dashboard/Render/3">K&#252;leme T&#252;neli Sıvama İş Emri Farklı Olan Paletler</a>
+                                        </li>
+                                </ul>
+
+                            </li>
+                </ul>
+            </li>
+
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-bar-chart"></i>
+                        <span class="title">Raporlar</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/Report/Shift" class="hidden">
+                                Vardiya Raporları
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Report/Transfer">
+                                    Transfer Raporu
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Report/Incomplete">
+                                    Eksiklik Raporu
+                                </a>
+                            </li>
+                                                    <li>
+                            <a href="/Report/StockActivitiesDevEx">
+                                Stok Hareketleri <span class="badge badge-warning badge-roundless">beta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Report/Machine" class="hidden">
+                                Makine Raporları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Report/Productivity" class="hidden">
+                                Makine Verimliliği
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Report/Production" class="hidden">
+                                Üretim Raporları
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Report/ReportBarcodesDevEx">
+                                    Üretim Barkodları
+                                </a>
+                            </li>
+                        <li>
+                            <a href="/Report/Card" class="hidden">
+                                Operasyon Refakat Kartları
+                            </a>
+                        </li>
+                            <li>
+                                
+                                <a href="/Report/OperationsListDevEx">
+                                    Operasyon Tarihçesi
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Report/OperatorOee">
+                                    Operatör Performansları
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Report/Oee">
+                                    OEE Raporları
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Report/Productions">
+                                    Üretim Raporları
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Report/WorkmanshipDevEx">
+                                    İşçilik Raporları
+                                </a>
+                            </li>
+                                                                                                    <li>
+                                <a href="/Report/Live">
+                                    Canlı Görüntüle
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Report/Grande">
+                                    Fabrika Takip Raporu
+                                </a>
+                            </li>
+                                                <li>
+                            <a href="/Report/WorkLoad">
+                                Makine Yük Raporu
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Report/ProcessParameters">
+                                    İşlem Parametreleri
+                                </a>
+                            </li>
+                        <li>
+                            <a href="/Report/Management">
+                                Yönetim Raporu
+                                <span class="badge badge-success badge-roundless">yeni</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Report/ProductOperatorCharacteristicHistoryListDevEx">
+                                Op.Bazlı Karakteristikleri Tarihçesi
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Report/ActivityHistorysDevEx">
+                                Hareket Geçmişi
+                                <span class="badge badge-success badge-roundless">yeni</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Report/MeasurementList">
+                                Ölçüm Listesi
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Report/MeasumentPieChart">
+                                Enerji Tüketimi Grafiği
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Report/MeasumentPieChartWithAktifEnerji">
+                                Aktif Enerji Grafiği
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-check-square-o"></i>
+                        <span class="title">Kalite Kontrol</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                            <li>
+                                <a href="/Quality/PlanListDevEx">
+                                    Kalite Kontrol Planları
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Quality/Edit/-1">
+                                        Kalite Kontrol Planı Ekle
+                                    </a>
+                                </li>
+                                                    <li>
+                                <a href="/Quality/PropDevEx">
+                                    Kontrol Özellikleri
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Quality/PropEdit/-1">
+                                        Kontrol Özelliği Ekle
+                                    </a>
+                                </li>
+                                                                        <li>
+                            <a href="/Mercanlar/BarcodeQualityDetailDevEx">
+                                Kalite Kontrol Özellikleri
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="/Quality/Analyses">
+                                    Analizler
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Quality/AnalyzeDetailsList/-1">
+                                    Analiz Detayları
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Quality/QualityControlGraphicsDevEx">
+                                    Kontrol Grafikleri Sayfası
+                                </a>
+                            </li>
+                        <li>
+                            <a href="/Quality/AnalysisDetail" style="display:none">
+                                Analizler
+                            </a>
+                        </li>
+                        <li style="display:none">
+                            <a href="/Quality/AnalysisResults">
+                                Analizler Sonuçları
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="/Quality/Treeview">
+                                    İzlenebilirlik Raporu
+                                </a>
+                            </li>
+                        <li>
+                            <a href="/Configuration/Attributes">
+                                Özellikler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/AttributeEdit/-1">
+                                Özellik Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Quality/ShiftCheckList">
+                                Vardiya Kontrol Formları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Quality/ShiftCheckFormEdit/-1">
+                                Vardiya Kontrol Formu Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Quality/UnsuitabilityListDevEx">
+                                Uygunsuzluk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Quality/UnsuitabilityEdit/-1">
+                                Uygunsuzluk Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Quality/UnsuitabilityConfirmListDevEx">
+                                Uygunsuzluk Onay Listesi
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-exclamation-circle"></i>
+                        <span class="title">Bakım - Arıza</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        
+                        <li>
+                            <a href="/Maintenance/List">
+                                Arıza Kayıtları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Maintenance/FaultHistoryDevEx">
+                                Üretim Onay Süreci Listesi
+                            </a>
+                        </li>
+                        
+
+                        <li>
+                            <a href="/Maintenance/Edit" style="display:none">
+                                Arıza Kayıtları
+                            </a>
+                        </li>
+                                                <li>
+                            <a href="/Report/FaultOperatorDevEx">
+                                Arıza Operatör Raporu
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-calendar"></i>
+                        <span class="title">Çalışma Çizelgeleri</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                            <li>
+                                <a href="/Schedule/List">
+                                    Çizelgeler
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Schedule/Edit/-1">
+                                        Çizelge Ekle
+                                    </a>
+                                </li>
+                                                    <li>
+                                <a href="/Schedule/TemplateList">
+                                    Şablonlar
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/Schedule/TemplateEdit/-1">
+                                        Şablon Ekle
+                                    </a>
+                                </li>
+                        <li>
+                            <a href="/Schedule/WorkCalendarDevEx">
+                                Çalışma Takvimi
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-times-circle"></i>
+                        <span class="title">Başarısız İşlemler</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/FailedTransactions/FailedTransactionsList">
+                                Başarısız İşlem Listesi
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-users"></i>
+                        <span class="title">Kullanıcılar</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/User/List">
+                                Kullanıcılar
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/User/Edit/-1">
+                                    Kullanıcı Ekle
+                                </a>
+                            </li>
+                                                <li class="hidden">
+                            <a href="/User/Live">
+                                Canlı Görüntüle
+                            </a>
+                        </li>
+                                            </ul>
+                </li>
+
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-key"></i>
+                            <span class="title">Yetkilendirme</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                                <li>
+                                    <a href="/Authorization/RoleDevEx">
+                                        Roller
+                                    </a>
+                                </li>
+                                    <li>
+                                        <a href="/Authorization/Edit/-1">
+                                            Rol Ekle
+                                        </a>
+                                    </li>
+                                                            <li>
+                                    <a href="/Authorization/AuthAreaDevEx">
+                                        Yetki Bölgeleri
+                                    </a>
+                                </li>
+                                    <li>
+                                        <a href="/Authorization/AreaEdit/-1">
+                                            Yetki Bölgesi Ekle
+                                        </a>
+                                    </li>
+
+                        </ul>
+                    </li>
+
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-cogs"></i>
+                        <span class="title">Temel Tanımlamalar</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                            <li>
+                                <a href="/Configuration/FlawCodesDevEx">
+                                    Ürün Hata Kodları
+                                </a>
+                            </li>
+                        <li style="display:none;">
+                            <a href="/Configuration/FlawEdit">
+                                Ürün Hata Kodları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Maintenance/MaintenancePlanProgramEdit/-1">
+                                Planlı Bakım Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Maintenance/PlanProgramDevEx">
+                                Planlı Bakım Listesi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/AgvEdit/-1">
+                               Agv Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/AgvListDevEx">
+                                Agv Listesi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/MaintenanceTypeEdit/-1">
+                                Bakım Tipi Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/MaintenanceTypeDevEx">
+                                Bakım Tipleri
+                            </a>
+                        </li>
+                            <li>
+                                <a href="/Configuration/PauseReasonDevEx">
+                                    Duraklatma Nedenleri
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Configuration/PauseReasonGroupDevEx">
+                                    Duraklatma Nedeni Grupları
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Configuration/FaultsDevEx">
+                                    Arıza Nedenleri
+                                </a>
+                            </li>
+                        <li>
+                            <a href="/Configuration/FaultTypesDevEx">
+                                Arıza Tipleri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/FaultTypeEdit/-1">
+                                Arıza Tipi Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Configuration/FaultSourcesDevEx">
+                                Arıza Kaynakları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/FaultSourceEdit/-1">
+                                Arıza Kaynağı Ekle
+                            </a>
+                        </li>
+                                                    <li>
+                                <a href="/Configuration/CompAssignments">
+                                    Bilgisayar Atamaları
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/Configuration/Smtp">
+                                    Smtp Bilgileri
+                                </a>
+                            </li>
+                                                <li>
+                            <a href="/Configuration/PlcConnectedDevEx">
+                                Plc Makine Bağlantıları
+                            </a>
+                        </li>
+
+                        
+                        <li>
+                            <a href="/Configuration/PlcServiceDevEx">
+                                Plc Servisleri
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Configuration/ItemAttributeDevEx">
+                                Özellikler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/ItemAttributeEdit/-1">
+                                Özellik Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Configuration/ItemCharacteristicsDevEx">
+                                Karakteristikler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/ItemCharacteristicsEdit/-1">
+                                Karakteristik Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/SourceEdit/-1">
+                                Kaynak Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Configuration/SourceDevEx">
+                                Kaynaklar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/DecisionEdit/-1">
+                                Karar Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Configuration/DecisionDevEx">
+                                Kararlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/InpdsEventEdit/-1">
+                                Event Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/InpdsEventListDevEx">
+                                Eventler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/InpdsEventActionListDevEx/-1">
+                                Event Aksiyonları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/FixationEdit/-1">
+                                Tespit Yeri Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Configuration/FixationDevEx">
+                                Tespit Yerleri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Configuration/UserPositionEdit/-1">
+                                Kullanıcı Pozisyonu Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Configuration/UserPositionDevEx">
+                                Kullanıcı Pozisyonları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Quality/AUnsuitabilityDescDevExList">
+                                Uygunsuzluk Tanımlamaları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Quality/BUnsuitabilityDescEdit/-1">
+                                Uygunsuzluk Tanımı Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Manage/ExcelDataTransferList">
+                                Excel Aktarımları
+                            </a>
+                        </li>
+
+                        
+                        <li>
+                            <a href="/Manage/ExcelDataTransferDevEx">
+                                Excel Aktarımları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Manage/ExcelHeadEdit/-1">
+                                Excel Aktarımı Ekle
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Manage/ExcelDataTableMethodsDevEx">
+                                Excel Metodları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Manage/ExcelDataTableMethodsEdit/-1">
+                                Excel Metodları Ekle
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-cogs"></i>
+                        <span class="title">Entegrasyon Tanımlamaları</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        
+                        <li>
+                            <a href="/Entegration/EntegrationDevEx">
+                                Entegrasyonlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Entegration/EntegrationLogDevEx">
+                                Entegrasyon Logları
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-clock-o"></i>
+                            <span class="title">Zamanlanmış İşler</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="/ScheduledJobs/List">
+                                    Zamanlanmış İşler
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                                                                                                                                                
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span class="title">Akü Geliştirmeleri</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        
+                        <li>
+                            <a href="/AkoAku/LotTemplateDevEx">
+                                Lot Eki Şablonları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/AkoAku/LotTemplates/-1">
+                                Lot Eki Şablon Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/AkoAku/Entegration">
+                                Entegrasyon
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+
+
+
+
+        </ul>
+        <!-- END SIDEBAR MENU -->
+    </div>
+</div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                Widget settings form goes here
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn blue">Save changes</button>
+                                <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+                <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                <!-- BEGIN PAGE HEADER-->
+                <h3 class="page-title">
+                    Kontrol Paneli <small></small>
+                </h3>
+                <div class="page-bar">
+                    <ul class="page-breadcrumb" id="breadCrumb"></ul>
+                </div>
+                <!-- END PAGE HEADER-->
+                <!-- Mesajlar -->
+                                <!-- Mesajlar -->
+                <!-- BEGIN PAGE CONTENT-->
+                <div class="row" style="overflow:auto">
+                    <div class="col-md-12">
+                        <div class="se-pre-con"></div>
+                        
+
+<script>
+    var preVal = ['0', '0', '0', '0', '0', '0', '0', '0', '0'];
+</script>
+<style>
+    .mainRow, .page-content {
+        min-width: 1650px;
+        overflow:auto;
+    }
+
+    a.machineTitle {
+        color: #fff;
+        font-size: 11px;
+        margin-top: 95px;
+        margin-left: 71px;
+        font-weight: bold;
+        display: block;
+    }
+
+    .quantity, .operator, .oee, .lastprod {
+        color: #fff;
+        margin-left: 71px;
+    }
+</style>
+
+<div class="row mainRow">
+    <div class="col-md-9 col-xs-9">
+        <img src="/Content/img/dashboard.jpg" width="100%" />
+    </div>
+    <div class="col-md-3 col-xs-2">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="dashboard"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dashboardMachines">
+</div>
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT-->
+            </div>
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner">
+            2016 &copy; Inpds
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+
+
+    
+    
+    <script src="/Content/js/jquery.blockui.min.js?v=v2.2.201"></script>
+    <script src="/Content/plugins/uniform/jquery.uniform.min.js?v=v2.2.201"></script>
+    <script src="/Content/plugins/jquery-slimscroll/jquery.slimscroll.min.js?v=v2.2.201"></script>
+    <script src="/Content/plugins/bootbox/bootbox.min.js?v=v2.2.201"></script>
+    
+    <script src="/Content/plugins/jquery-ui/jquery-ui.min.js?v=v2.2.201"></script>
+    <script src="/Content/plugins/highcharts/highcharts.js"></script><script src="/Content/plugins/highcharts/highcharts-more.js"></script><script src="/Content/plugins/highcharts/modules/exporting.js"></script><script src="/Content/js/pages/dashboard.js"></script>
+    <script src="/Content/js/metronic.js?v=v2.2.201"></script>
+    <script src="/Content/js/layout.js?v=v2.2.201"></script>
+    <script src="/Content/js/menu-translations.js?v=v2.2.201"></script>
+    <script src="/Content/js/custom.js?v=v2.2.201"></script>
+
+
+                                <script src="/Content/js/c/aku.js"></script>                <script src="/Content/js/url.min.js?v=v2.2.201"></script>
+    <script src="/Content/js/jquery.knob.min.js?v=v2.2.201"></script>
+    <script src="/Content/js/ui-alert-dialog-api.js?v=v2.2.201"></script>
+    <script>
+        jQuery(document).ready(function () {
+            Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout
+            UIAlertDialogApi.init();
+            $(document).ready(function () { UpdateDashboard(20000); });
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+    <!-- END JAVASCRIPTS -->
+
+</body>
+<!-- END BODY -->
+
+</html>
